@@ -1,11 +1,31 @@
-﻿public class Car : Vehicle
-{
-    private int seats;
-    private string engineType;
-    private string transmission;
-    private bool convertible;
+﻿
+    public class Car : Vehicle
+    {
+        private int seats;
+        private string engineType;
+        private string transmission;
+        private bool convertible;
 
-    public int Seats
+
+    public void Cardata()
+    {
+        Console.WriteLine("Enter number of seats:");
+        seats = Console.ReadLine();
+
+        Console.WriteLine("Enter car engineType:");
+        engineType = Console.ReadLine();
+
+        Console.WriteLine("Enter car transmission:");
+        transmission = Console.ReadLine();
+
+        Console.WriteLine("Enter car convertible:");
+        convertible = Console.ReadLine();
+    }
+
+
+
+
+    /*public int Seats
     {
         get { return seats; }
         set { seats = value; }
@@ -27,11 +47,14 @@
     {
         get { return convertible; }
         set { convertible = value; }
-    }
+    }*/
+
+
 
     public override void DisplayDetails()
-    {
-        base.DisplayDetails();
-        Console.WriteLine($"Seats: {Seats}, Engine Type: {EngineType}, Transmission: {Transmission}, Convertible: {(Convertible ? "Yes" : "No")}");
+        {
+            base.DisplayDetails();
+            Console.WriteLine($" Model: {model}, Manufacturerer: {manufacturer}, Year: {year}, RentalPrice: {}Seats: {Seats}, Engine Type: {EngineType}, Transmission: {Transmission}, Convertible: {(Convertible ? "Yes" : "No")}");
+        }
     }
-}
+

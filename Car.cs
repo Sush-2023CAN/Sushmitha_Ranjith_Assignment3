@@ -1,16 +1,37 @@
-﻿namespace Car
-
+﻿public class Car : Vehicle
 {
-    class Car
+    private int seats;
+    private string engineType;
+    private string transmission;
+    private bool convertible;
+
+    public int Seats
     {
-        public int Seats { get; set; }
-        private string EngineType { get; set; }
-        private int Transmission { get; set; }
-        private bool Convertible { get; set; }
+        get { return seats; }
+        set { seats = value; }
+    }
 
-        public void DisplayDetails(int Seats, string EngineType, int Transmission, int Convertible)
-        {
+    public string EngineType
+    {
+        get { return engineType; }
+        set { engineType = value; }
+    }
 
-        }
+    public string Transmission
+    {
+        get { return transmission; }
+        set { transmission = value; }
+    }
+
+    public bool Convertible
+    {
+        get { return convertible; }
+        set { convertible = value; }
+    }
+
+    public override void DisplayDetails()
+    {
+        base.DisplayDetails();
+        Console.WriteLine($"Seats: {Seats}, Engine Type: {EngineType}, Transmission: {Transmission}, Convertible: {(Convertible ? "Yes" : "No")}");
     }
 }

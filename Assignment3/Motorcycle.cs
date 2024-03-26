@@ -9,9 +9,20 @@ namespace Assignment3
         public string fuelType;
         public string hasFairing;
 
-       
+        public void Motorcycledata()
+        {
+            Console.WriteLine("Enter engineCapacity:");
+            engineCapacity = Convert.ToInt32(Console.ReadLine());
 
-       
+            Console.WriteLine("Enter fuelType:");
+            fuelType = Console.ReadLine();
+
+            Console.WriteLine("Enter motorcycle hasFairing:");
+            hasFairing = (Console.ReadLine());
+
+        }
+
+
 
         public override void DisplayDetails()
         {

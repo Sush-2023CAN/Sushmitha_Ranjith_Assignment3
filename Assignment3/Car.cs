@@ -1,17 +1,17 @@
 ﻿
 namespace Assignment3
 {
-    class Car : Vehicle
+    class Car : Vehicle   // Creating Car class
     {
         public int seats;
         public string engineType;
-        public string transmission;
+        public string transmission;   // Declaring Properties specific to cars
         public string convertible;
 
 
         public void Cardata()
         {
-            Console.WriteLine("Enter number of seats:");
+            Console.WriteLine("Enter number of seats:");   // Getting Car data to be added from customer
             seats = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter car engineType:");
@@ -25,38 +25,10 @@ namespace Assignment3
         }
 
 
-
-
-        /*public int Seats
-        {
-            get { return seats; }
-            set { seats = value; }
-        }
-
-        public string EngineType
-        {
-            get { return engineType; }
-            set { engineType = value; }
-        }
-
-        public string Transmission
-        {
-            get { return transmission; }
-            set { transmission = value; }
-        }
-
-        public bool Convertible
-        {
-            get { return convertible; }
-            set { convertible = value; }
-        }*/
-
-
-
-        public override void DisplayDetails()
+        public override void DisplayDetails() // Creating overriden class
         {
             
-            Console.WriteLine($" Model: {model}, Manufacturerer: {manufacturer}, Year: {year}, RentalPrice: {rentalPrice}Seats: {seats}, Engine Type: {engineType}, Transmission: {transmission}, Convertible: {(convertible)}");
+            Console.WriteLine($" Model: {model}, Manufacturerer: {manufacturer}, Year: {year}, RentalPrice: {rentalPrice}Seats: {seats}, Engine Type: {engineType},\n Transmission: {transmission}, Convertible: {(convertible)}");
         }
     }
 }

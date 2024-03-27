@@ -4,10 +4,10 @@ using System;
 
 namespace Assignment3
 {
-    public class Truck : Vehicle
+    public class Truck : Vehicle   // Creating Truck class
     {
         private int capacity;
-        private string truckType;
+        private string truckType;     // Declaring Properties specific to Truck class
         private string fourWheelDrive;
 
 
@@ -16,7 +16,7 @@ namespace Assignment3
         public void Truckdata()
         {
             Console.WriteLine("Enter the capacity:");
-            capacity = Convert.ToInt32(Console.ReadLine());
+            capacity = Convert.ToInt32(Console.ReadLine());  // Getting truck data from customer
 
             Console.WriteLine("Enter the truckType:");
             truckType = Console.ReadLine();
@@ -27,7 +27,7 @@ namespace Assignment3
 
         public int Capacity
         {
-            get { return capacity; }
+            get { return capacity; }  //get value and set value declared
             set { capacity = value; }
         }
 
@@ -43,7 +43,7 @@ namespace Assignment3
             set { fourWheelDrive = value; }
         }
 
-        public override void DisplayDetails()
+        public override void DisplayDetails()  //overriden class
         {
           
             Console.WriteLine($" Model: {model}, Manufacturerer: {manufacturer}, Year: {year}, RentalPrice: {rentalPrice} \n Capacity: {Capacity} tons, Truck Type: {TruckType}, Four-Wheel Drive: {(fourWheelDrive)}");

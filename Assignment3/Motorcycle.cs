@@ -3,16 +3,16 @@ using System;
 
 namespace Assignment3
 {
-    public class Motorcycle : Vehicle
+    public class Motorcycle : Vehicle  // Creating motorcycle class
     {
         public int engineCapacity;
-        public string fuelType;
+        public string fuelType;        // Declaring properties specific to motorcycle
         public string hasFairing;
 
         public void Motorcycledata()
         {
             Console.WriteLine("Enter engineCapacity:");
-            engineCapacity = Convert.ToInt32(Console.ReadLine());
+            engineCapacity = Convert.ToInt32(Console.ReadLine());   //Getting motorcycle data from customer
 
             Console.WriteLine("Enter fuelType:");
             fuelType = Console.ReadLine();
@@ -24,7 +24,7 @@ namespace Assignment3
 
 
 
-        public override void DisplayDetails()
+        public override void DisplayDetails() // Overriden class
         {
             
             Console.WriteLine($" Model: {model}, Manufacturerer: {manufacturer}, Year: {year}, RentalPrice: {rentalPrice} \n Engine Capacity: {engineCapacity}cc, Fuel Type: {fuelType}, Has Fairing: {hasFairing}");
